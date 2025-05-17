@@ -57,30 +57,39 @@
 
 
 .social-links {
-  margin-top: 18px;
   display: flex;
   gap: 16px;
+  margin-top: 16px;
 }
 
 .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: #f1f1fb;
-  color: #3a86ff;
+  background: #f3f3f3;
+  color: #333;
   font-size: 1.5rem;
-  box-shadow: 0 2px 8px rgba(34, 34, 59, 0.07);
+  line-height: 1;
   transition: background 0.2s, color 0.2s, transform 0.2s;
-  border: 1.5px solid transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-decoration: none;
+  padding: 0;
+}
+
+.social-links a i {
+  display: block;
+  line-height: 1;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
 }
 
 .social-links a:hover {
-  background: #3a86ff;
+  background: #0072b1; /* LinkedIn blue as example */
   color: #fff;
-  border-color: #3a86ff;
   transform: translateY(-3px) scale(1.08);
 }
 
