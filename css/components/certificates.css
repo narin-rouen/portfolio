@@ -1,0 +1,46 @@
+/* Certificates Section */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.certificate-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.certificate-header i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-right: 15px;
+}
+
+.certificate-header h3 {
+  font-size: 1.2rem;
+  color: var(--dark);
+}
+
+.issuer {
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
