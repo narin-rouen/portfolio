@@ -1,6 +1,6 @@
 /* Contact Section Styles */
 .contact.section {
-  background: #f9f9f9;
+  background: #f8fafd;
   padding: 60px 0;
 }
 
@@ -35,61 +35,98 @@
   min-width: 260px;
 }
 
-.contact-info h3 {
-  font-size: 1.3rem;
-  margin-bottom: 18px;
-  color: #22223b;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  color: #4a4e69;
-  font-size: 1rem;
+.contact-info-card {
+  max-width: 420px;
+  margin: 32px auto 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(34, 34, 59, 0.10);
+  padding: 36px 32px 28px 32px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.contact-info i {
-  color: #3a86ff;
-  margin-right: 10px;
-  font-size: 1.1rem;
-}
-
-
-.social-links {
+.contact-info-header {
   display: flex;
-  gap: 16px;
-  margin-top: 16px;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
 }
 
-.social-links a {
+.contact-avatar {
+  font-size: 3.2rem;
+  color: #3a86ff;
+  background: #f1f1fb;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.contact-info-header h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #22223b;
+}
+
+.contact-role {
+  color: #4a4e69;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.contact-details {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.contact-details p {
+  margin: 8px 0;
+  color: #22223b;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-details a {
+  color: #3a86ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-details a:hover {
+  color: #22223b;
+  text-decoration: underline;
+}
+
+.contact-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.contact-social a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #f3f3f3;
-  color: #333;
+  background: #f1f1fb;
+  color: #3a86ff;
   font-size: 1.5rem;
-  line-height: 1;
+  box-shadow: 0 2px 8px rgba(34, 34, 59, 0.07);
   transition: background 0.2s, color 0.2s, transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-decoration: none;
-  padding: 0;
+  border: 1.5px solid transparent;
+  text-decoration: none; /* Prevent underline */
 }
 
-.social-links a i {
-  display: block;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-}
-
-.social-links a:hover {
-  background: #0072b1; /* LinkedIn blue as example */
+.contact-social a:hover {
+  background: #3a86ff;
   color: #fff;
+  border-color: #3a86ff;
   transform: translateY(-3px) scale(1.08);
+  text-decoration: none; /* Prevent underline on hover */
 }
 
 .contact-form {
@@ -152,5 +189,15 @@
   .contact-form {
     width: 100%;
     min-width: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info-card {
+    padding: 22px 10px 16px 10px;
+  }
+  .contact-avatar {
+    font-size: 2.2rem;
+    padding: 4px;
   }
 }
