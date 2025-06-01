@@ -23,7 +23,8 @@
   box-shadow: 0 2px 8px rgba(34, 34, 59, 0.08);
 }
 
-.slider-btn:hover, .slider-btn:focus {
+.slider-btn:hover,
+.slider-btn:focus {
   background: #3a86ff;
   color: #fff;
   outline: none;
@@ -43,7 +44,7 @@
   flex: 1 1 320px;
   background: #f9f9f9;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(34,34,59,0.10);
+  box-shadow: 0 4px 24px rgba(34, 34, 59, 0.1);
   padding: 32px 28px 24px 28px;
   display: flex;
   flex-direction: column;
@@ -74,14 +75,10 @@
   margin-top: auto;
 }
 
-.author-img {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2.5px solid #3a86ff;
-  box-shadow: 0 2px 8px rgba(34,34,59,0.10);
-  background: #fff;
+.author-icon {
+  font-size: 52px;
+  color: #3a86ff;
+  text-shadow: 0 2px 8px rgba(34, 34, 59, 0.1);
 }
 
 .recommendation-author strong {
