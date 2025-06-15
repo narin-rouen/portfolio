@@ -5,15 +5,17 @@
   gap: 50px;
 }
 
-.technical-skills h3, .soft-skills h3 {
+.technical-skills h3,
+.soft-skills h3 {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: var(--dark);
   position: relative;
 }
 
-.technical-skills h3::after, .soft-skills h3::after {
-  content: '';
+.technical-skills h3::after,
+.soft-skills h3::after {
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -43,6 +45,9 @@
   height: 100%;
   background-color: var(--primary);
   border-radius: 4px;
+  width: 0;
+  opacity: 0;
+  transition: width 1.5s cubic-bezier(0.1, 0.45, 0.1, 0.85), opacity 0.3s ease;
 }
 
 .soft-skills ul {
@@ -53,6 +58,11 @@
   margin-bottom: 15px;
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.soft-skills li:hover {
+  transform: translateX(5px);
 }
 
 .soft-skills i {

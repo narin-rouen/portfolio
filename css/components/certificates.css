@@ -10,11 +10,33 @@
   border-radius: 8px;
   padding: 25px;
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.certificate-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  transition: transform 0.4s ease;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 
 .certificate-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-card:hover::before {
+  transform: scaleY(1);
 }
 
 .certificate-header {
@@ -25,13 +47,26 @@
 
 .certificate-header i {
   font-size: 1.8rem;
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-right: 15px;
+  transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .certificate-header i {
+  transform: rotateY(180deg);
 }
 
 .certificate-header h3 {
   font-size: 1.2rem;
   color: var(--dark);
+  transition: color 0.3s ease;
+}
+
+.certificate-card:hover .certificate-header h3 {
+  color: var(--primary);
 }
 
 .issuer {
@@ -43,4 +78,17 @@
 .date {
   color: var(--dark-gray);
   font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
 }
